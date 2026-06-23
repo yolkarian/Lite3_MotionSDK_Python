@@ -1,34 +1,6 @@
 from __future__ import annotations
 
-from typing import TypedDict
-
-class JointCmdDict(TypedDict):
-    position: float
-    velocity: float
-    torque: float
-    kp: float
-    kd: float
-
-
-class JointDataDict(TypedDict):
-    position: float
-    velocity: float
-    torque: float
-    temperature: float
-
-
-class ImuDict(TypedDict):
-    timestamp: int
-    angle_roll: float
-    angle_pitch: float
-    angle_yaw: float
-    angular_velocity_roll: float
-    angular_velocity_pitch: float
-    angular_velocity_yaw: float
-    acc_x: float
-    acc_y: float
-    acc_z: float
-
+from ._types import ImuDict, JointCmdDict, JointDataDict
 
 class RobotCmd:
     """Mutable command buffer for the 12 Lite3 joints."""

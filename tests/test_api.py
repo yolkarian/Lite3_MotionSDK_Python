@@ -3,6 +3,7 @@ import math
 import pytest
 
 import lite3_motion_sdk as sdk
+from lite3_motion_sdk import _types
 
 
 def test_robot_cmd_joint_access() -> None:
@@ -73,6 +74,18 @@ def test_timer_can_be_created_and_closed() -> None:
         assert timer.current_time() >= 0.0
     finally:
         timer.close()
+
+
+def test_public_typed_dict_names() -> None:
+    assert "JointCmdDict" in sdk.__all__
+    assert "JointDataDict" in sdk.__all__
+    assert "ImuDict" in sdk.__all__
+    assert sdk.JointCmdDict is _types.JointCmdDict
+    assert sdk.JointDataDict is _types.JointDataDict
+    assert sdk.ImuDict is _types.ImuDict
+    assert sdk.JointCmdDict.__name__ == "JointCmdDict"
+    assert sdk.JointDataDict.__name__ == "JointDataDict"
+    assert sdk.ImuDict.__name__ == "ImuDict"
 
 
 def test_constants() -> None:

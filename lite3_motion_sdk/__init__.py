@@ -12,6 +12,7 @@ from ._lib import (
     record_initial_data,
     stand_up,
 )
+from ._types import ImuDict, JointCmdDict, JointDataDict
 
 ROBOT = 1
 SDK = 2
@@ -20,6 +21,9 @@ SDK_CONTROL = SDK
 
 __all__ = [
     "Command",
+    "ImuDict",
+    "JointCmdDict",
+    "JointDataDict",
     "Receiver",
     "RobotCmd",
     "RobotData",
