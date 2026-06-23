@@ -1,0 +1,3 @@
+recursive-include src *.zig
+recursive-include lite3_motion_sdk *.pyi py.typed libdeeprobotics_*.so
+global-exclude *.abi3.so

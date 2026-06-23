@@ -1,0 +1,40 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+*.whl
+*.tar.gz
+
+# Native extension and Zig build outputs
+.zig-cache/
+zig-out/
+pydust.build.zig
+*.abi3.so
+*.so
+!lite3_motion_sdk/libdeeprobotics_*.so
+
+# Local/editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
